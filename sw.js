@@ -1,5 +1,5 @@
 /* Seoul Dex service worker — offline-first app shell + runtime tile cache. */
-var VERSION = "seoul-dex-v1";
+var VERSION = "seoul-dex-v2";
 var SHELL = VERSION + "-shell";
 var TILES = VERSION + "-tiles";
 

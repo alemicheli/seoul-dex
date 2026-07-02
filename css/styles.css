@@ -187,6 +187,10 @@ button { font-family: inherit; cursor: pointer; }
 .btn-ghost { background: transparent; }
 
 /* ===== Detail sheet ===== */
+/* The `hidden` attribute must win over the .sheet display below, otherwise the
+   sheet stays on screen: it blocks all taps, blurs the page via its backdrop,
+   and leaves the ✕ button floating. Keep this rule first. */
+.sheet[hidden] { display: none !important; }
 .sheet { position: fixed; inset: 0; z-index: 60; display: flex; align-items: flex-end; justify-content: center; }
 .sheet-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); backdrop-filter: blur(2px); }
 .sheet-card {
