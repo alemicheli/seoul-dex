@@ -1,0 +1,16 @@
+{
+  "name": "Seoul Dex",
+  "short_name": "Seoul Dex",
+  "description": "A Pokédex for Seoul — sights, food, photo spots, street food, map, weather and directions.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#c0392b",
+  "theme_color": "#c0392b",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

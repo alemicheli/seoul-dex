@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <title>Seoul Dex</title>
+  <meta name="description" content="A Pokédex for Seoul — sights, food, map, weather & how to get there." />
+
+  <!-- PWA / iOS home-screen -->
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#c0392b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Seoul Dex" />
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+  <link rel="icon" href="icons/icon-192.png" />
+
+  <!-- Maps -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- ===== Top bar ===== -->
+    <header class="appbar">
+      <div class="appbar-row">
+        <div class="brand">
+          <span class="pokeball" aria-hidden="true"></span>
+          <div class="brand-text">
+            <h1>SEOUL DEX</h1>
+            <span class="brand-sub" id="clock">Seoul · --:--</span>
+          </div>
+        </div>
+        <button class="weather-chip" id="weatherChip" title="Weather in Seoul">
+          <span id="weatherIcon">⛅</span>
+          <span id="weatherTemp">--°</span>
+        </button>
+      </div>
+      <div class="progress">
+        <div class="progress-bar"><span id="progressFill"></span></div>
+        <span class="progress-label" id="progressLabel">0 / 0 discovered</span>
+      </div>
+    </header>
+
+    <!-- ===== Views ===== -->
+    <main id="views">
+      <!-- DEX -->
+      <section id="view-dex" class="view is-active">
+        <div class="controls">
+          <input id="search" class="search" type="search" placeholder="Search places, food, areas…" autocomplete="off" />
+          <div class="chips" id="chips"></div>
+        </div>
+        <div class="grid" id="grid"></div>
+        <p class="empty" id="dexEmpty" hidden>Nothing matches — try another filter.</p>
+      </section>
+
+      <!-- MAP -->
+      <section id="view-map" class="view">
+        <div id="map"></div>
+      </section>
+
+      <!-- NEARBY -->
+      <section id="view-nearby" class="view">
+        <div class="nearby-head">
+          <button id="locateBtn" class="btn btn-primary">📍 Use my location</button>
+          <p class="nearby-origin" id="nearbyOrigin">Sorted by distance from Hotel Riviera</p>
+        </div>
+        <div class="list" id="nearbyList"></div>
+      </section>
+    </main>
+
+    <!-- ===== Bottom tabs ===== -->
+    <nav class="tabbar">
+      <button class="tab is-active" data-view="dex"><span>📕</span>Dex</button>
+      <button class="tab" data-view="map"><span>🗺️</span>Map</button>
+      <button class="tab" data-view="nearby"><span>📍</span>Nearby</button>
+    </nav>
+  </div>
+
+  <!-- ===== Detail sheet ===== -->
+  <div id="detail" class="sheet" hidden>
+    <div class="sheet-backdrop" data-close></div>
+    <div class="sheet-card" role="dialog" aria-modal="true">
+      <button class="sheet-close" data-close aria-label="Close">✕</button>
+      <div class="sheet-body" id="detailBody"><!-- filled by JS --></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
