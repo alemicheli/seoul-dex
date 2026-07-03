@@ -243,3 +243,24 @@ window.SEOUL_PLACES = [
     blurb: "Wholesale fashion towers (Doota, Migliore) that stay open through the night.",
     tip: "Peaks after midnight. Pair with DDP right next door." }
 ];
+
+/* Best time of day per place — powers the 🌅 Morning / ☀️ Afternoon / 🌙 Evening
+ * filter + badge. Places that are good anytime get all three. */
+(function () {
+  var T = {
+    gyeongbokgung: ["morning"], changdeokgung: ["morning"], deoksugung: ["afternoon", "evening"],
+    nseoultower: ["evening"], lotteworldtower: ["afternoon", "evening"], cheonggyecheon: ["evening"],
+    gwanghwamun: ["morning", "afternoon"], seoullo: ["evening"], bukchon: ["morning"], insadong: ["afternoon"],
+    ikseondong: ["evening"], myeongdong: ["evening"], hongdae: ["evening"], yeonnam: ["morning", "afternoon"],
+    itaewon: ["evening"], euljiro: ["evening"], seongsu: ["afternoon"], garosugil: ["afternoon"],
+    gangnam: ["afternoon", "evening"], coex: ["afternoon"], bongeunsa: ["morning"], apgujeong: ["afternoon"],
+    ddp: ["evening"], "national-museum": ["afternoon"], leeum: ["afternoon"], "war-memorial": ["afternoon"],
+    jogyesa: ["morning"], ihwa: ["afternoon"], oiltank: ["afternoon"], "namsan-park": ["morning", "afternoon"],
+    "seoul-forest": ["morning", "afternoon"], "yeouido-park": ["evening"], banpo: ["evening"], seonyudo: ["afternoon"],
+    bukhansan: ["morning"], gwangjang: ["afternoon", "evening"], tongin: ["morning", "afternoon"], sindang: ["evening"],
+    namdaemun: ["morning", "afternoon"], noryangjin: ["evening"], tosokchon: ["afternoon"], "myeongdong-kyoja": ["afternoon"],
+    "mapo-galbi": ["evening"], "onion-anguk": ["morning"], mangwon: ["afternoon", "evening"],
+    commonground: ["afternoon", "evening"], "hyundai-seoul": ["afternoon"], "dongdaemun-night": ["evening"]
+  };
+  window.SEOUL_PLACES.forEach(function (p) { p.time = T[p.id] || ["morning", "afternoon", "evening"]; });
+})();

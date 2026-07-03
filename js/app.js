@@ -18,11 +18,16 @@
     nightlife: { label: "Nightlife",color: "#3a6ea5" },
     photo:     { label: "Photo Spots", color: "#ff477e", tag: true },
     street:    { label: "Street Food", color: "#ef7b2b", tag: true },
-    booking:   { label: "Requires Booking", color: "#0e9aa7", tag: true }
+    booking:   { label: "Requires Booking", color: "#0e9aa7", tag: true },
+    morning:   { label: "Morning",   color: "#f6a94b", tag: true, daypart: true },
+    afternoon: { label: "Afternoon", color: "#2f9bd6", tag: true, daypart: true },
+    evening:   { label: "Evening",   color: "#6b4fb3", tag: true, daypart: true }
   };
   var CHIP_EMOJI = { all: "✨", sight: "🏯", food: "🍜", culture: "🎨", nature: "🌳",
-    shopping: "🛍️", nightlife: "🍺", photo: "📸", street: "🌭", booking: "🎟️" };
-  function inCat(p, cat) { return cat === "all" || p.cat === cat || (p.tags && p.tags.indexOf(cat) !== -1); }
+    shopping: "🛍️", nightlife: "🍺", photo: "📸", street: "🌭", booking: "🎟️",
+    morning: "🌅", afternoon: "☀️", evening: "🌙" };
+  // a place matches a filter if it's its primary cat, carries the tag, OR is tagged for that time of day
+  function inCat(p, cat) { return cat === "all" || p.cat === cat || (p.tags && p.tags.indexOf(cat) !== -1) || (p.time && p.time.indexOf(cat) !== -1); }
 
   // ---- Persistent visited state ----
   var STORE_KEY = "seoulDex.visited.v1";
@@ -91,12 +96,19 @@
   function mealLabel(m) { return ({ lunch: "🥢 Best for lunch", dinner: "🌙 Best for dinner", both: "🍽️ Lunch or dinner", coffee: "☕ Coffee & snacks" })[m] || ""; }
   function mealShort(m) { return ({ lunch: "🥢 Lunch", dinner: "🌙 Dinner", both: "🍽️ L/D", coffee: "☕ Café" })[m] || ""; }
 
+  // ---- Time of day ----
+  var DAYPART_META = { morning: { e: "🌅", label: "Morning" }, afternoon: { e: "☀️", label: "Afternoon" }, evening: { e: "🌙", label: "Evening" } };
+  function currentDaypart(min) { if (min >= 300 && min < 720) return "morning"; if (min >= 720 && min < 1080) return "afternoon"; return "evening"; }
+  function timeEmojis(p) { if (!p.time) return ""; if (p.time.length === 3) return "🕒"; return p.time.map(function (d) { return DAYPART_META[d].e; }).join(""); }
+  function bestTimeLabel(p) { if (!p.time) return ""; if (p.time.length === 3) return "🕒 Anytime"; return p.time.map(function (d) { return DAYPART_META[d].e + " " + DAYPART_META[d].label; }).join(" / "); }
+  function bestTimeMini(p) { if (!p.time) return ""; if (p.time.length === 3) return "🕒 Anytime"; return p.time.map(function (d) { return DAYPART_META[d].e; }).join("") + " " + p.time.map(function (d) { return DAYPART_META[d].label; }).join("/"); }
+
   // ================= Clock =================
   function tickClock() {
     var now = new Date();
     var t = new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Seoul", hour: "2-digit", minute: "2-digit" }).format(now);
     var d = new Intl.DateTimeFormat("en-US", { timeZone: "Asia/Seoul", weekday: "short", day: "numeric", month: "short" }).format(now);
-    $("#clock").textContent = "Seoul · " + t + " · " + d;
+    $("#clock").textContent = "Seoul · " + t + " · " + d + " " + DAYPART_META[currentDaypart(seoulNow().min)].e;
   }
 
   // ================= Weather =================
@@ -155,7 +167,8 @@
     if (!inCat(p, state.cat)) return false;
     if (state.q) {
       var tagStr = (p.tags || []).map(function (t) { return (CATS[t] || {}).label || t; }).join(" ");
-      var hay = (p.n + " " + p.kr + " " + p.area + " " + CATS[p.cat].label + " " + tagStr + " " + (p.blurb || "")).toLowerCase();
+      var timeStr = (p.time || []).map(function (t) { return (DAYPART_META[t] || {}).label || t; }).join(" ");
+      var hay = (p.n + " " + p.kr + " " + p.area + " " + CATS[p.cat].label + " " + tagStr + " " + timeStr + " " + (p.blurb || "")).toLowerCase();
       if (hay.indexOf(state.q) === -1) return false;
     }
     return true;
@@ -182,7 +195,7 @@
         '<div class="card-body">' +
           '<div class="card-name">' + esc(p.n) + ' ' + tagBadges(p) + '</div>' +
           '<div class="card-meta"><span class="cat-tag" style="--acc:' + catColor(p.cat) + '">' +
-            esc(CATS[p.cat].label) + '</span> · ' + esc(p.area) + '</div>' +
+            esc(CATS[p.cat].label) + '</span> · ' + esc(p.area) + ' <span class="dp" title="Best time to go">' + timeEmojis(p) + '</span></div>' +
         '</div>';
       card.addEventListener("click", function () { openDetail(p.id); });
       grid.appendChild(card);
@@ -216,6 +229,7 @@
           '<span class="pill" style="--acc:' + catColor(p.cat) + '">#' + pad3(p._num) + ' · ' + esc(CATS[p.cat].label) + '</span>' +
           '<span class="pill ' + st.cls + '">' + st.label + '</span>' +
           (p.meal ? '<span class="pill">' + mealLabel(p.meal) + '</span>' : '') +
+          '<span class="pill">🕒 ' + bestTimeLabel(p).replace(/🌅 |☀️ |🌙 |🕒 /g, "") + '</span>' +
           (p.tags || []).map(function (t) { return '<span class="pill" style="--acc:' + catColor(t) + '">' + (CHIP_EMOJI[t] || "") + ' ' + esc((CATS[t] || {}).label || t) + '</span>'; }).join("") +
           '<span class="pill">' + rarityLabel(p.rarity) + '</span>' +
           '<span class="pill">📍 ' + esc(p.area) + '</span>' +
@@ -344,22 +358,29 @@
 
   function picksOrigin() {
     if (picks.mode === "conf") return { lat: CONF.lat, lng: CONF.lng, label: "COEX / ICML" };
-    if (picks.mode === "near") return userGeo || { lat: HOME.lat, lng: HOME.lng, label: "Hotel Riviera" };
+    if (picks.mode === "near" || picks.mode === "now") return userGeo || { lat: HOME.lat, lng: HOME.lng, label: "Hotel Riviera" };
     return null;
   }
 
   function renderPicks() {
     var listEl = $("#picksList"); if (!listEl) return;
     var now = seoulNow();
+    var dp = currentDaypart(now.min);
     var origin = picksOrigin();
+    var nowFallback = false;
     var list = PLACES.filter(function (p) { return inCat(p, picks.cat); });
-    if (picks.openNow) list = list.filter(function (p) { return openStatus(p, now).state === "open"; });
+    if (picks.openNow && picks.mode !== "now") list = list.filter(function (p) { return openStatus(p, now).state === "open"; });
 
     if (picks.mode === "top") {
       list = list.filter(function (p) { return p.pick; });
       list.sort(function (a, b) { return (RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]) || a._num - b._num; });
     } else if (picks.mode === "conf") {
       list = list.filter(function (p) { return p.cat === "food" || (p.tags && p.tags.indexOf("street") !== -1); });
+    } else if (picks.mode === "now") {
+      // what's good for the current time of day AND open right now
+      var timed = list.filter(function (p) { return p.time && p.time.indexOf(dp) !== -1 && openStatus(p, now).state === "open"; });
+      if (!timed.length) { nowFallback = true; timed = list.filter(function (p) { return openStatus(p, now).state === "open"; }); }
+      list = timed;
     }
     // distance annotate + sort for location modes
     if (origin) {
@@ -375,6 +396,7 @@
       var p = o.p, st = openStatus(p, now);
       var sub = picks.mode === "top" ? p.why : (p.subway);
       var badges = '<span class="mini ' + st.cls + '">' + st.label.replace("· until", "till") + '</span>' +
+                   '<span class="mini dp">' + bestTimeMini(p) + '</span>' +
                    (p.meal ? '<span class="mini">' + mealShort(p.meal) + '</span>' : '') +
                    ((p.tags && p.tags.indexOf("booking") !== -1) ? '<span class="mini st-book">🎟️ Book</span>' : '');
       var row = el("button", "row" + (visited.has(p.id) ? " visited" : ""));
@@ -392,10 +414,14 @@
 
     // origin caption + locate button visibility
     var cap = $("#picksOrigin");
-    if (picks.mode === "top") cap.textContent = "Our hand-picked highlights" + (picks.openNow ? " that are open now" : "");
+    if (picks.mode === "now") cap.textContent = nowFallback
+      ? "Nothing tagged for the " + DAYPART_META[dp].label.toLowerCase() + " is open now — showing what's open, nearest first"
+      : "Good for right now (" + DAYPART_META[dp].e + " " + DAYPART_META[dp].label.toLowerCase() + ") · open & nearest first";
+    else if (picks.mode === "top") cap.textContent = "Our hand-picked highlights" + (picks.openNow ? " that are open now" : "");
     else if (picks.mode === "conf") cap.textContent = "Food & street eats sorted by distance from COEX / ICML";
     else cap.textContent = "Sorted by distance from " + (origin ? origin.label : "Hotel Riviera");
-    $("#picksLocate").hidden = picks.mode !== "near";
+    $("#picksLocate").hidden = !(picks.mode === "near" || picks.mode === "now");
+    $("#openNowToggle").style.display = picks.mode === "now" ? "none" : "";
   }
 
   function locateMe(cb) {
@@ -442,7 +468,7 @@
       s.addEventListener("click", function () {
         picks.mode = s.dataset.mode;
         $$(".seg").forEach(function (x) { x.classList.toggle("is-active", x === s); });
-        if (picks.mode === "near" && !userGeo) locateMe();
+        if ((picks.mode === "near" || picks.mode === "now") && !userGeo) locateMe();
         renderPicks();
       });
     });

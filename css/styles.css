@@ -109,6 +109,8 @@ img { max-width: 100%; }
 .card-body { padding: 9px 10px 11px; }
 .card-name { font-size: 13.5px; font-weight: 700; line-height: 1.2; }
 .card-meta { font-size: 11px; color: var(--muted); margin-top: 4px; display: flex; align-items: center; gap: 5px; }
+.card-meta .dp { margin-left: auto; letter-spacing: 1px; }
+.mini.dp { background: var(--card); }
 .cat-tag { font-weight: 700; color: var(--ink); padding: 1px 7px; border-radius: 6px;
   background: color-mix(in srgb, var(--acc, var(--muted)) 18%, transparent); }
 
