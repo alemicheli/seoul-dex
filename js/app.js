@@ -347,7 +347,7 @@
   }
   document.addEventListener("click", function (e) {
     var id = e.target && e.target.getAttribute && e.target.getAttribute("data-open");
-    if (id) { e.preventDefault(); openDetail(id); }
+    if (id) { e.preventDefault(); if (map) map.closePopup(); openDetail(id); }
   });
 
   // ================= Picks (recommended) =================

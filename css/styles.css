@@ -165,7 +165,9 @@ img { max-width: 100%; }
 .map-filter-wrap { flex: 0 0 auto; display: flex; align-items: center; gap: 8px; padding: 8px 10px; background: var(--bg); border-bottom: 1px solid var(--line); }
 .map-filter-wrap .chips { flex: 1; margin: 0; padding-bottom: 0; }
 .map-count { font-size: 11px; color: var(--muted); white-space: nowrap; font-weight: 700; }
-#map { flex: 1 1 auto; width: 100%; min-height: 0; }
+/* position+z-index makes #map its own stacking context so Leaflet's controls
+   (z-index 1000) can't escape and paint over the detail sheet / tab bar. */
+#map { flex: 1 1 auto; width: 100%; min-height: 0; position: relative; z-index: 0; }
 .leaflet-container { background: var(--bg); }
 .marker-pin {
   width: 26px; height: 26px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
@@ -189,7 +191,8 @@ img { max-width: 100%; }
 
 /* ===== Detail sheet ===== */
 .sheet[hidden] { display: none !important; }
-.sheet { position: fixed; inset: 0; z-index: 60; display: flex; align-items: flex-end; justify-content: center; }
+/* z-index above Leaflet's controls (1000) so the map can never overlay the sheet */
+.sheet { position: fixed; inset: 0; z-index: 1200; display: flex; align-items: flex-end; justify-content: center; }
 .sheet-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.5); -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); }
 .sheet-card {
   position: relative; width: 100%; max-width: 640px; max-height: 92vh; overflow-y: auto;
