@@ -1,5 +1,5 @@
 /* Seoul Dex service worker — offline-first app shell + runtime tile cache. */
-var VERSION = "seoul-dex-v2";
+var VERSION = "seoul-dex-v3";
 var SHELL = VERSION + "-shell";
 var TILES = VERSION + "-tiles";
 
@@ -51,7 +51,8 @@ self.addEventListener("fetch", function (e) {
         return cache.match(req).then(function (hit) {
           if (hit) return hit;
           return fetch(req).then(function (res) {
-            if (res && res.status === 200) cache.put(req, res.clone());
+            // tiles may come back opaque (no-cors) or 200 (cors) — cache either so the map works offline
+            if (res && (res.status === 200 || res.type === "opaque")) cache.put(req, res.clone());
             return res;
           }).catch(function () { return hit; });
         });

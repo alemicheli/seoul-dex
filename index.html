@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Seoul Dex</title>
-  <meta name="description" content="A Pokédex for Seoul — sights, food, map, weather & how to get there." />
+  <meta name="description" content="A Pokédex for Seoul — sights, food, photo spots, street food, map, weather, opening hours & directions." />
 
   <!-- PWA / iOS home-screen -->
   <link rel="manifest" href="manifest.webmanifest" />
@@ -54,26 +54,40 @@
         <p class="empty" id="dexEmpty" hidden>Nothing matches — try another filter.</p>
       </section>
 
-      <!-- MAP -->
-      <section id="view-map" class="view">
-        <div id="map"></div>
+      <!-- PICKS -->
+      <section id="view-picks" class="view">
+        <div class="picks-modes">
+          <button class="seg is-active" data-mode="top">⭐ Top picks</button>
+          <button class="seg" data-mode="near">📍 Near me</button>
+          <button class="seg" data-mode="conf">🍜 Near ICML</button>
+        </div>
+        <div class="picks-controls">
+          <div class="chips" id="picksChips"></div>
+          <div class="picks-actionrow">
+            <button class="toggle" id="openNowToggle">🟢 Open now</button>
+            <button class="toggle" id="picksLocate" hidden>📍 Use my location</button>
+          </div>
+          <p class="picks-origin" id="picksOrigin"></p>
+        </div>
+        <div class="list" id="picksList"></div>
+        <p class="empty" id="picksEmpty" hidden>Nothing matches — try another filter.</p>
       </section>
 
-      <!-- NEARBY -->
-      <section id="view-nearby" class="view">
-        <div class="nearby-head">
-          <button id="locateBtn" class="btn btn-primary">📍 Use my location</button>
-          <p class="nearby-origin" id="nearbyOrigin">Sorted by distance from Hotel Riviera</p>
+      <!-- MAP -->
+      <section id="view-map" class="view">
+        <div class="map-filter-wrap">
+          <div class="chips" id="mapFilter"></div>
+          <span class="map-count" id="mapCount"></span>
         </div>
-        <div class="list" id="nearbyList"></div>
+        <div id="map"></div>
       </section>
     </main>
 
     <!-- ===== Bottom tabs ===== -->
     <nav class="tabbar">
       <button class="tab is-active" data-view="dex"><span>📕</span>Dex</button>
+      <button class="tab" data-view="picks"><span>⭐</span>Picks</button>
       <button class="tab" data-view="map"><span>🗺️</span>Map</button>
-      <button class="tab" data-view="nearby"><span>📍</span>Nearby</button>
     </nav>
   </div>
 

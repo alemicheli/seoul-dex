@@ -1,0 +1,242 @@
+{
+ "gyeongbokgung": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg/960px-%EA%B4%91%ED%99%94%EB%AC%B8_%EC%9B%94%EB%8C%80.jpg",
+  "title": "Gyeongbokgung",
+  "lang": "en"
+ },
+ "changdeokgung": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/%EC%B0%BD%EB%8D%95%EA%B6%81_%EC%A0%84%EA%B2%BD_%282012%29.jpg/960px-%EC%B0%BD%EB%8D%95%EA%B6%81_%EC%A0%84%EA%B2%BD_%282012%29.jpg",
+  "title": "Changdeokgung",
+  "lang": "en"
+ },
+ "deoksugung": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/%EB%8D%95%EC%88%98%EA%B6%81_%EC%A0%84%EA%B2%BD_%282013%29.jpg/960px-%EB%8D%95%EC%88%98%EA%B6%81_%EC%A0%84%EA%B2%BD_%282013%29.jpg",
+  "title": "Deoksugung",
+  "lang": "en"
+ },
+ "nseoultower": {
+  "source": "https://upload.wikimedia.org/wikipedia/en/a/a6/NamsanTower_%28Cropped%29.jpeg",
+  "title": "Namsan Seoul Tower",
+  "lang": "en"
+ },
+ "lotteworldtower": {
+  "source": "https://upload.wikimedia.org/wikipedia/en/thumb/2/28/Lotte_World_Tower_day_view_10.jpg/960px-Lotte_World_Tower_day_view_10.jpg",
+  "title": "Lotte World Tower",
+  "lang": "en"
+ },
+ "cheonggyecheon": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg/960px-Cheonggyecheon_stream_at_sunrise_with_trees_in_Seoul.jpg",
+  "title": "Cheonggyecheon",
+  "lang": "en"
+ },
+ "gwanghwamun": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Gwanghwamun_20240413.jpg/960px-Gwanghwamun_20240413.jpg",
+  "title": "Gwanghwamun",
+  "lang": "en"
+ },
+ "seoullo": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Seoullo_7017_Overview_%285%29.jpg/960px-Seoullo_7017_Overview_%285%29.jpg",
+  "title": "Seoullo 7017",
+  "lang": "en"
+ },
+ "bukchon": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Bukchon_Hanok_Village_01.jpg/960px-Bukchon_Hanok_Village_01.jpg",
+  "title": "Bukchon Hanok Village",
+  "lang": "en"
+ },
+ "insadong": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg/960px-Insa-dong_%EC%9D%B8%EC%82%AC%EB%8F%99_October_1_2020_20.jpg",
+  "title": "Insa-dong",
+  "lang": "en"
+ },
+ "ikseondong": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/View_of_Ikseon-dong_from_National_Tax_Service_Jongno_District_Office.jpg/960px-View_of_Ikseon-dong_from_National_Tax_Service_Jongno_District_Office.jpg",
+  "title": "익선동",
+  "lang": "ko"
+ },
+ "myeongdong": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/%EB%AA%85%EB%8F%998%EA%B8%B8_%EA%B1%B0%EB%A6%AC_%282020.03%29.jpg/960px-%EB%AA%85%EB%8F%998%EA%B8%B8_%EA%B1%B0%EB%A6%AC_%282020.03%29.jpg",
+  "title": "Myeong-dong",
+  "lang": "en"
+ },
+ "hongdae": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Street_hongdae_Seoul.jpg/960px-Street_hongdae_Seoul.jpg",
+  "title": "Hongdae (area)",
+  "lang": "en"
+ },
+ "gangnam": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/20250513_2%ED%98%B8%EC%84%A0_%EA%B0%95%EB%82%A8%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg/960px-20250513_2%ED%98%B8%EC%84%A0_%EA%B0%95%EB%82%A8%EC%97%AD_%EC%97%AD%EB%AA%85%ED%8C%90.jpg",
+  "title": "Gangnam station",
+  "lang": "en"
+ },
+ "ddp": {
+  "source": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Dongdaemun_Design_Plaza_at_night%2C_Seoul%2C_Korea.jpg/960px-Dongdaemun_Design_Plaza_at_night%2C_Seoul%2C_Korea.jpg",
+  "title": "Dongdaemun Design Plaza",
+  "lang": "en"
+ },
+ "namsan-park": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Namsan_and_Namsan_Tour_at_Dusk.jpg/960px-Namsan_and_Namsan_Tour_at_Dusk.jpg",
+  "title": "Namsan",
+  "lang": "en"
+ },
+ "yeouido-park": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Yeouido2025.jpg/960px-Yeouido2025.jpg",
+  "title": "Yeouido",
+  "lang": "en"
+ },
+ "sindang": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Tteokbokki.JPG/960px-Tteokbokki.JPG",
+  "title": "떡볶이",
+  "lang": "ko"
+ },
+ "yeonnam": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Yeonnam-dong_Community_Service_Center_20140524_184843.jpg/960px-Yeonnam-dong_Community_Service_Center_20140524_184843.jpg",
+  "title": "연남동",
+  "lang": "ko"
+ },
+ "itaewon": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Itaewon_2.jpg/960px-Itaewon_2.jpg",
+  "title": "Itaewon",
+  "lang": "en"
+ },
+ "euljiro": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/%EC%9D%84%EC%A7%80%EB%A1%9C3%EA%B0%80%EC%97%AD_%EB%8F%99%EC%AA%BD_%EC%83%81%EA%B0%80%EA%B1%B0%EB%A6%AC_%282%29.jpg/960px-%EC%9D%84%EC%A7%80%EB%A1%9C3%EA%B0%80%EC%97%AD_%EB%8F%99%EC%AA%BD_%EC%83%81%EA%B0%80%EA%B1%B0%EB%A6%AC_%282%29.jpg",
+  "title": "을지로",
+  "lang": "ko"
+ },
+ "seongsu": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/P00250601_105307354_%EC%84%B1%EC%88%981%EA%B0%80%EC%A0%9C1%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0.JPG/960px-P00250601_105307354_%EC%84%B1%EC%88%981%EA%B0%80%EC%A0%9C1%EB%8F%99%EC%A3%BC%EB%AF%BC%EC%84%BC%ED%84%B0.JPG",
+  "title": "성수동",
+  "lang": "ko"
+ },
+ "garosugil": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/5/50/Alexandra_park_avenue.jpg",
+  "title": "가로수길",
+  "lang": "ko"
+ },
+ "coex": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/COEX_cafe_show_2022.jpg/960px-COEX_cafe_show_2022.jpg",
+  "title": "COEX",
+  "lang": "en"
+ },
+ "bongeunsa": {
+  "source": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Bongeunsa_Seoul_5.jpg/960px-Bongeunsa_Seoul_5.jpg",
+  "title": "Bongeunsa",
+  "lang": "en"
+ },
+ "apgujeong": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Apgujeong-dong_Community_Service_Center_20140615_094422.jpg/960px-Apgujeong-dong_Community_Service_Center_20140615_094422.jpg",
+  "title": "압구정동",
+  "lang": "ko"
+ },
+ "national-museum": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/National_Museum_of_Korea%2C_Seoul_%282%29_%2840236586235%29.jpg/960px-National_Museum_of_Korea%2C_Seoul_%282%29_%2840236586235%29.jpg",
+  "title": "National Museum of Korea",
+  "lang": "en"
+ },
+ "leeum": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Leeum%2C_Samsung_Museum_of_Art.jpg/960px-Leeum%2C_Samsung_Museum_of_Art.jpg",
+  "title": "Leeum Museum of Art",
+  "lang": "en"
+ },
+ "war-memorial": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/The_War_Memorial_Of_Korea_240615_02.jpg/960px-The_War_Memorial_Of_Korea_240615_02.jpg",
+  "title": "War Memorial of Korea",
+  "lang": "en"
+ },
+ "jogyesa": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Jogyesa_Temple_%281509839597%29.jpg/960px-Jogyesa_Temple_%281509839597%29.jpg",
+  "title": "Jogyesa",
+  "lang": "en"
+ },
+ "ihwa": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg/960px-%ED%95%9C%EC%96%91%EB%8F%84%EC%84%B1%EB%82%99%EC%82%B0%EA%B5%AC%EA%B0%84.jpg",
+  "title": "Naksan",
+  "lang": "en"
+ },
+ "oiltank": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Mapo_Park_-_Human_Nature.jpg/960px-Mapo_Park_-_Human_Nature.jpg",
+  "title": "문화비축기지",
+  "lang": "ko"
+ },
+ "seoul-forest": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/f/f5/SeoulForest.jpg",
+  "title": "Seoul Forest",
+  "lang": "en"
+ },
+ "banpo": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg/960px-2011%EB%85%84_11%EC%9B%94_%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD_%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C_%EB%AA%85%EC%86%8C_%28Seoul_best_attractions%29_%EB%8B%AC%EB%B9%9B%EB%AC%B4%EC%A7%80%EA%B0%9C%EB%B6%84%EC%88%981.jpg",
+  "title": "Banpo Bridge",
+  "lang": "en"
+ },
+ "seonyudo": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Seoul_Seonyudo_Park.jpg/960px-Seoul_Seonyudo_Park.jpg",
+  "title": "Seonyudo, Seoul",
+  "lang": "en"
+ },
+ "bukhansan": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg/960px-Bukhansan_%28%EB%B6%81%ED%95%9C%EC%82%B0%29.jpg",
+  "title": "Bukhansan",
+  "lang": "en"
+ },
+ "gwangjang": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Gwangjang_Market%2C_Seoul_01.jpg/960px-Gwangjang_Market%2C_Seoul_01.jpg",
+  "title": "Gwangjang Market",
+  "lang": "en"
+ },
+ "tongin": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/4/40/Tongin_Market_2018-06-17-18-28-59.jpg",
+  "title": "통인시장",
+  "lang": "ko"
+ },
+ "namdaemun": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/1/1e/%EB%82%A8%EB%8C%80%EB%AC%B8_%EC%A4%91%EC%95%99%EB%A1%9C%EC%9D%98_%EC%9D%B4%EB%8F%99%EC%8B%9D_%EB%85%B8%EC%A0%90.jpg",
+  "title": "Namdaemun Market",
+  "lang": "en"
+ },
+ "noryangjin": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Korea-Seoul-Noryangjin_Fish_Market-03.jpg/960px-Korea-Seoul-Noryangjin_Fish_Market-03.jpg",
+  "title": "Noryangjin Fisheries Wholesale Market",
+  "lang": "en"
+ },
+ "tosokchon": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Samgye-tang_2.jpg/960px-Samgye-tang_2.jpg",
+  "title": "삼계탕",
+  "lang": "ko"
+ },
+ "myeongdong-kyoja": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/8/87/Haemul-kal-guksu.jpg",
+  "title": "칼국수",
+  "lang": "ko"
+ },
+ "mapo-galbi": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Korean.food-Galbi-03.jpg/960px-Korean.food-Galbi-03.jpg",
+  "title": "Galbi",
+  "lang": "en"
+ },
+ "onion-anguk": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Anguk_Station_20230402_001.jpg/960px-Anguk_Station_20230402_001.jpg",
+  "title": "안국역",
+  "lang": "ko"
+ },
+ "mangwon": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Mangwon_1-dong_Community_Service_Center_20140524_181910.jpg/960px-Mangwon_1-dong_Community_Service_Center_20140524_181910.jpg",
+  "title": "망원동",
+  "lang": "ko"
+ },
+ "commonground": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ilgam_Lake_in_the_fall.jpg/960px-Ilgam_Lake_in_the_fall.jpg",
+  "title": "Konkuk University",
+  "lang": "en"
+ },
+ "hyundai-seoul": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/1/18/Yeouido_Han_River_Park.jpg",
+  "title": "파크원",
+  "lang": "ko"
+ },
+ "dongdaemun-night": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Korea-Seoul-Dongdaemun_Market-01.jpg/960px-Korea-Seoul-Dongdaemun_Market-01.jpg",
+  "title": "Dongdaemun Market",
+  "lang": "en"
+ }
+}
