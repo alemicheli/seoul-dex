@@ -238,5 +238,25 @@
   "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Korea-Seoul-Dongdaemun_Market-01.jpg/960px-Korea-Seoul-Dongdaemun_Market-01.jpg",
   "title": "Dongdaemun Market",
   "lang": "en"
+ },
+ "samwon-garden": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Korean.food-Galbi-03.jpg/960px-Korean.food-Galbi-03.jpg",
+  "title": "Galbi",
+  "lang": "en"
+ },
+ "saebyeokjip": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/2020-10-20_%EC%9C%A1%ED%9A%8C.jpeg/960px-2020-10-20_%EC%9C%A1%ED%9A%8C.jpeg",
+  "title": "육회",
+  "lang": "ko"
+ },
+ "geumdwaeji": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Samgyeopsal-gui.jpg/960px-Samgyeopsal-gui.jpg",
+  "title": "Samgyeopsal",
+  "lang": "en"
+ },
+ "maple-tree-house": {
+  "source": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Balinese_Roasted_Pork_Ribs_-_Iga_Babi_Panggang_Bali.JPG/960px-Balinese_Roasted_Pork_Ribs_-_Iga_Babi_Panggang_Bali.JPG",
+  "title": "갈비 (돼지고기)",
+  "lang": "ko"
  }
 }

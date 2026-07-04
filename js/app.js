@@ -18,13 +18,14 @@
     nightlife: { label: "Nightlife",color: "#3a6ea5" },
     photo:     { label: "Photo Spots", color: "#ff477e", tag: true },
     street:    { label: "Street Food", color: "#ef7b2b", tag: true },
+    bbq:       { label: "Korean BBQ", color: "#a1502e", tag: true },
     booking:   { label: "Requires Booking", color: "#0e9aa7", tag: true },
     morning:   { label: "Morning",   color: "#f6a94b", tag: true, daypart: true },
     afternoon: { label: "Afternoon", color: "#2f9bd6", tag: true, daypart: true },
     evening:   { label: "Evening",   color: "#6b4fb3", tag: true, daypart: true }
   };
   var CHIP_EMOJI = { all: "✨", sight: "🏯", food: "🍜", culture: "🎨", nature: "🌳",
-    shopping: "🛍️", nightlife: "🍺", photo: "📸", street: "🌭", booking: "🎟️",
+    shopping: "🛍️", nightlife: "🍺", photo: "📸", street: "🌭", bbq: "🥩", booking: "🎟️",
     morning: "🌅", afternoon: "☀️", evening: "🌙" };
   // a place matches a filter if it's its primary cat, carries the tag, OR is tagged for that time of day
   function inCat(p, cat) { return cat === "all" || p.cat === cat || (p.tags && p.tags.indexOf(cat) !== -1) || (p.time && p.time.indexOf(cat) !== -1); }

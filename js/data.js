@@ -218,9 +218,26 @@ window.SEOUL_PLACES = [
     blurb: "One dish done perfectly: knife-cut noodle soup (kalguksu) with garlicky dumplings. Michelin Bib Gourmand.",
     tip: "The complimentary kimchi is famously fiery and bottomless. Quick lunch or early dinner." },
   { id: "mapo-galbi", n: "Mapo Jeong Daepo (BBQ)", kr: "마포 정대포", cat: "food", emoji: "🥩", lat: 37.5430, lng: 126.9490,
-    area: "Mapo", subway: "Gongdeok (L5/6) · Exit 8", rarity: "common", hours: { o: "11:30", c: "23:00" }, meal: "dinner",
+    area: "Mapo", subway: "Gongdeok (L5/6) · Exit 8", rarity: "common", tags: ["bbq"], hours: { o: "11:30", c: "23:00" }, meal: "dinner",
     blurb: "Classic smoky Korean BBQ — thick pork galbi over charcoal, spicy 'galmaegisal' skirt.",
     tip: "A dinner-and-soju institution. Order the seasoned galbi. Grill smell in your clothes = doing it right." },
+  { id: "samwon-garden", n: "Samwon Garden (Galbi)", kr: "삼원가든", cat: "food", emoji: "🥩", lat: 37.5254, lng: 127.0378,
+    area: "Apgujeong", subway: "Apgujeong (L3) · Exit 3", rarity: "rare", tags: ["bbq"], hours: { o: "11:40", c: "22:00" }, meal: "dinner",
+    pick: true, why: "Upscale marinated galbi in a garden — ~10 min from your hotel",
+    blurb: "A Seoul institution since 1976: premium marinated beef galbi grilled tableside in a leafy garden courtyard.",
+    tip: "Smart-casual and a bit pricey, English menu. A great first-night BBQ near Cheongdam/Apgujeong." },
+  { id: "saebyeokjip", n: "Saebyeok Jip (24h BBQ)", kr: "새벽집", cat: "food", emoji: "🐂", lat: 37.5112, lng: 127.0245,
+    area: "Gangnam", subway: "Sinnonhyeon (L9) · Exit 4", rarity: "common", tags: ["bbq"], hours: { always: true }, meal: "dinner",
+    blurb: "A 24-hour Gangnam classic for charcoal beef BBQ and its famous raw beef (yukhoe) topped with a raw egg.",
+    tip: "Open around the clock — the go-to after a late night out. Always busy; cash-friendly." },
+  { id: "geumdwaeji", n: "Geumdwaeji Sikdang (Pork BBQ)", kr: "금돼지식당", cat: "food", emoji: "🥓", lat: 37.5570, lng: 127.0106,
+    area: "Jung-gu", subway: "Yaksu (L3/L6) · Exit 2", rarity: "rare", tags: ["bbq"], hours: { o: "11:40", c: "23:00" }, meal: "dinner",
+    blurb: "Michelin-listed samgyeopsal — thick, dry-aged pork belly and neck grilled for you to perfection.",
+    tip: "Expect a long queue — put your name on the waitlist early evening, then wander Sindang while you wait." },
+  { id: "maple-tree-house", n: "Maple Tree House (Galbi)", kr: "단풍나무집", cat: "food", emoji: "🍖", lat: 37.5345, lng: 126.9938,
+    area: "Itaewon", subway: "Itaewon (L6) · Exit 3", rarity: "common", tags: ["bbq"], hours: { o: "11:30", c: "22:00" }, meal: "dinner",
+    blurb: "Polished, English-friendly Korean BBQ in Itaewon — marinated galbi and pork grilled tableside with generous sides.",
+    tip: "A comfortable intro to Korean BBQ if it's your first — staff grill for you. Reserve on weekends." },
   { id: "onion-anguk", n: "Café Onion Anguk", kr: "어니언 안국", cat: "food", emoji: "🥐", lat: 37.5760, lng: 126.9857,
     area: "Jongno", subway: "Anguk (L3) · Exit 3", rarity: "rare", tags: ["photo"], hours: { o: "09:00", c: "22:00" }, meal: "coffee",
     blurb: "A restored hanok courtyard café famous for its snow-sugar 'pandoro' pastry.",
@@ -260,7 +277,8 @@ window.SEOUL_PLACES = [
     bukhansan: ["morning"], gwangjang: ["afternoon", "evening"], tongin: ["morning", "afternoon"], sindang: ["evening"],
     namdaemun: ["morning", "afternoon"], noryangjin: ["evening"], tosokchon: ["afternoon"], "myeongdong-kyoja": ["afternoon"],
     "mapo-galbi": ["evening"], "onion-anguk": ["morning"], mangwon: ["afternoon", "evening"],
-    commonground: ["afternoon", "evening"], "hyundai-seoul": ["afternoon"], "dongdaemun-night": ["evening"]
+    commonground: ["afternoon", "evening"], "hyundai-seoul": ["afternoon"], "dongdaemun-night": ["evening"],
+    "samwon-garden": ["evening"], saebyeokjip: ["evening"], geumdwaeji: ["evening"], "maple-tree-house": ["evening"]
   };
   window.SEOUL_PLACES.forEach(function (p) { p.time = T[p.id] || ["morning", "afternoon", "evening"]; });
 })();
